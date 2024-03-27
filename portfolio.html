@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css
+/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.
+js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css
+/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.
+js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+</script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Personal Portfolio</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #2d031f;
+            text-decoration: none;
+            font-weight: 700;
+            font-style: oblique;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: 2s;
+
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #d97bd1;
+        }
+
+        .Home {
+            height: 100vh;
+            background: linear-gradient(-90deg, #27063e 65%, #5b476e 35%);
+            display: flex;
+            align-items: center;
+            padding: 0 13%;
+            justify-content: space-between;
+        }
+
+        .Home-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            background: #3c245f;
+            border-radius: 50%;
+            border: 20px solid #5c4a6d;
+            outline: 25px solid #2b0141;
+        }
+
+        .Home-image img {
+            position: relative;
+            bottom: auto;
+            max-width: 230px;
+
+        }
+
+        .Home-content {
+            max-width: 600px;
+            color: #fff;
+            text-align: right;
+        }
+
+        .Home-content h1 {
+            font-size: 55px;
+            line-height: 1.4;
+
+        }
+
+        .Home-content h4{
+            font-size: 40px;
+            color: #0e0ebb;
+            -webkit-text-stroke: .5px #fff;
+        }
+
+        .Home-content p {
+            font-size: 16px;
+            margin: 20px;
+
+        }
+
+        .Home-sci a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #f3dede;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #7726b9;
+            text-decoration: none;
+            margin-left: 12px;
+            transition: .5s;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Home-sci a:hover {
+            background: #0014f0;
+            color: #fff;
+            border-color: #9aafb8;
+            box-shadow: 0 0 10px #00abf0;
+
+        }
+
+        .btn-box {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #7423b2;
+            border-radius: 30px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #b59cbc;
+            text-decoration: none;
+            border: 2px solid #fff;
+            bottom: auto;
+        }
+
+        .btn-box :hover {
+            box-shadow: 0 0 5px #8a619f;
+            border-color: #d0c8de;
+        }
+
+        .About-image {
+            outline: 15px solid #4c0677;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #290937;
+            border-radius: 50%;
+            border: 20px solid #6b5278;
+
+        }
+
+        .About-image img {
+            position: relative;
+            bottom: auto;
+            max-width: 200px;
+            border-radius: 8px;
+            padding-bottom: 20px;
+            display: flex;
+
+        }
+
+        .About {
+            display: flex;
+            align-items: center;
+        }
+
+        .About-content h1 {
+            color: #552e62;
+            text-align: center;
+        }
+
+        .About-content p {
+            font-size: 20px;
+            margin: 20px;
+            text-align: right;
+            justify-items: center;
+            color: #411147;
+        }
+
+        .Skills-content h1 {
+            color: #502674;
+            text-align: center;
+        }
+        .Project-content {
+            color: #461e5d;
+            font-size: 22px;
+        }
+
+        .Contact-content h1 {
+            color: #944e9b;
+        }
+
+        .Contact-content p {
+            color: rgb(96, 81, 229);
+        }
+
+        footer {
+
+            height: 15px;
+            margin: 2%;
+            text-align: center;
+            color: #646161;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"> </a>
+        <nav class="navbar">
+            <a href="#" class="active">HOME</a>
+            <a href="#"> ABOUT</a>
+            <a href="#"> SKILLS</a>
+            <a href="#"> PROJECTS</a>
+            <a href="#"> CONTACT</a>
+
+
+        </nav>
+    </header>
+    <section class="Home">
+        <div class="Home-image">
+            <img src="portfolio/pratyush.png" class="rounded-circle">
+        </div>
+        <div class="Home-content">
+            <h2> Hii, I'm Pratyush kamal Barik</h2>
+            <h4> Front-end Developer</h4>
+            <span id="element"></span>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+            <script>
+                var typed = new Typed('#element', {
+                 strings: ['Web Designer.', 'Video Editor'],
+                  typeSpeed: 60,
+                });
+              </script>
+            <p> "Passionate Web Developer Dedicated to Crafting Elegant Solutions and Transforming Ideas into Reality"
+            </p>
+            <div class="Home-sci">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></box-icon></a>
+
+            </div>
+            <br>
+            <a href="#" class="btn-box">More About me</a>
+        </div>
+    </section>
+    <hr>
+    <section1 class="About">
+        <div class="About-image">
+            <img src="portfolio/pratyush.png" class="rounded-circle">
+        </div>
+        <div class="About-content">
+            <h1><b> About me</b></h1>
+            <p>
+                👋 Hello! I'm Pratyush , a dedicated undergraduate student pursuing a Bachelor's degree in Computer
+                Science & Engineering (B.Tech CSE). With a profound passion for web development, I'm actively engaged in
+                honing my skills and contributing to the tech community.
+
+                💻 As a frontend developer, I thrive on the creative process of translating design concepts into
+                seamless user experiences. My journey in web development has been enriched by hands-on projects and
+                coursework, where I've gained proficiency in HTML, CSS, JavaScript, and various frontend frameworks.
+
+            </p>
+        </div>
+    </section1>
+    <hr>
+
+    <section2 class="Skills">
+        <div class="Skills-content">
+
+            <h1><b> My Skills</b></h1>
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h4>HTML</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar" style="width:90%"></div>
+                </div>
+                <br>
+                <h4>CSS</h4>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar" style="width:68%">
+                    </div>
+                </div>
+                <br>
+                <h4>JAVASCRIPT</h4>
+                <div class="progress">
+                    <div class="progress-bar bg-info progress-bar" style="width:78%">
+                    </div>
+                </div>
+                <br>
+                <h4>JAVA</h4>
+                <div class="progress">
+                    <div class="progress-bar bg-warning progress-bar" style="width:63%">
+                    </div>
+                </div>
+                <br>
+
+            </div>
+        </div>
+        <br>
+        <br>
+
+    </section2>
+    <br>
+    <br>
+
+    <hr>
+    <section3 class="Projects">
+        <div class="Project-content">
+            <br>
+            <h1><b>
+                    <center>My Projects
+                </b></center>
+            </h1>
+            <ul style="list-style-type: square;"></ul>
+
+            <li> Responsive Landing Page </li><br>
+            <hr>
+            <li>Stopwatch web Application</li><br>
+            <hr>
+            <li>Tic-Tac-Toe Web application </li><br>
+            <hr>
+            <li>Personal Portfolio website </li><br>
+            <hr>
+            <li>Weather App</li><br>
+            <hr>
+
+            </ul>
+
+            <br>
+            </section4>
+            <br>
+            <section5 class="Contacts">
+                <div class="Contact-content">
+
+                    <h1><b>
+                            <center><u>Contact Info:-</u>
+                        </b></center>
+                    </h1>
+                    <br>
+                    <p>
+                        <center>E-mail:- pratyushkamal23@gmail.com</center </p>
+                    <p>
+                        <center>Mob:- 9337921469</center>
+                    </p>
+                </div>
+
+
+                <hr>
+                <footer>
+                    <div id="footer">
+           <h6>copyright &#169; pratyushportfolio.com | All rights reversed</h6>
+        </div>
+    </footer>
+
+</body>
+
+</html>
